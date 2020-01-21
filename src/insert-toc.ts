@@ -31,6 +31,10 @@ export function insertTOC(toc: Node, target: HtmlElementNode, parent: HtmlElemen
       break;
 
     default:
-      throw new Error(`Invalid table-of-contents position: ${position}`);
+      if (typeof position !== "number" || position >= parent.children!.length) {
+        throw new Error(`Invalid table-of-contents position: ${position}`);
+      } else {
+        parent.children!.splice(position, 0, toc);
+      }
   }
 }

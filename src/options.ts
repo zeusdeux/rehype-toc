@@ -6,7 +6,7 @@ import { HeadingTagName, HtmlElementNode, ListItemNode } from "./types";
  * The different positions at which the table of contents can be inserted,
  * relative to the `<main>` element.
  */
-export type InsertPosition = "beforebegin" | "afterbegin" | "beforeend" | "afterend";
+export type InsertPosition = "beforebegin" | "afterbegin" | "beforeend" | "afterend" | number;
 
 /**
  * Options for the Rehype TOC plugin
