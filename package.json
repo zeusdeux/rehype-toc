@@ -1,6 +1,6 @@
 {
   "name": "@zeusdeux/rehype-toc",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "A rehype plugin that adds a table of contents (TOC) to the page",
   "keywords": [
     "unified",
