@@ -31,10 +31,10 @@ export function insertTOC(toc: Node, target: HtmlElementNode, parent: HtmlElemen
       break;
 
     default:
-      if (typeof position !== "number" || position >= parent.children!.length) {
+      if (typeof position !== "number") {
         throw new Error(`Invalid table-of-contents position: ${position}`);
       } else {
-        parent.children!.splice(position, 0, toc);
+        target.children!.splice(Math.min(position, target.children!.length - 1), 0, toc);
       }
   }
 }
